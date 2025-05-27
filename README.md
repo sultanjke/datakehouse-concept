@@ -40,6 +40,7 @@ git clone https://github.com/sultanjke/datalakehouse-concept.git
 cd datalakehouse-concept
 ```
 
+> Please, make sure creating each terminal for every component to not messing up.
 
 ### Run the MinIO Component in VS Code's Terminal
 
