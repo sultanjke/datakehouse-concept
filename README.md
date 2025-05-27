@@ -143,6 +143,33 @@ Now you can see our names table on the Dremio dashboard under our new connected 
 
 ![image 11](https://github.com/user-attachments/assets/ac09f7c4-040a-4969-8b79-3d6c8377b9da)
 
+### Power BI Integration (Live Data via DirectQuery)
+
+Dremio supports ODBC/JDBC connections (31010:31010, 32010:32010 ports), enabling seamless integration with Power BI for live dashboards using DirectQuery. This ensures that data in your Iceberg tables (stored in MinIO) is 
+queried in real time without requiring dataset imports. Here's the two instructions:
+
+* ODBC Connection:
+  
+    i. In Power BI Desktop, choose: Get Data -> ODBC
+  
+    ii. Select Dremio Connector (set up a DSN for it in ODBC Data Sources 64-bit)
+
+  ![image](https://github.com/user-attachments/assets/eb226f74-6db0-4555-b221-93503cb86787)
+  ![image](https://github.com/user-attachments/assets/4e793de2-ba53-4d79-9e98-3265fc14f7e7)
+  
+    iii. Fill out the connection details (Server: localhost or dremio, port: 31010)
+  
+    iv. Verify the authentication credentials: usually, your credentials you fill out the first time you're joined to the GUI system of Dremio.
+
+* Direct Power BI Connection, searching up Dremio Software in Get Data Tab
+
+  ![image](https://github.com/user-attachments/assets/2f18f13b-64b6-493c-b08a-7115647c62a9)
+
+  > Make sure encryption is disabled, creds are localhost or dremio:31010, and auth creds are the same as in log-in creds for Dremio GUI.
+
 ## Result
 
 So now you get the performance of Dremio and Apache Iceberg along with the git-like capabilities that the Nessie catalog brings, allowing you to isolate ingestion on branches, create zero-clones for experimentation, and rollback your catalog for disaster recovery all on your data lakehouse.
+
+![image](https://github.com/user-attachments/assets/3b38236b-085d-4f83-b1e6-92c9b2fa62a5)
+
