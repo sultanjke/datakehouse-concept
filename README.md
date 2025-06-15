@@ -6,7 +6,7 @@ This project provides a complete local deployment of a modern **Data Lakehouse**
 
 ## Architecture Overview
 
-![Frame 1](https://github.com/user-attachments/assets/99f9c0bb-434c-449c-902d-310f22397cd8)
+![scheme](https://github.com/user-attachments/assets/e60710d7-3dd6-4a13-b8e1-5183e3f99f3e)
 
 ---
 
